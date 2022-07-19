@@ -19,9 +19,9 @@ It is a Blockchain based system that can be used to store data in a decentralize
 
 Make sure that `texlive` packages are present.
 
-`texlive-bin` : TeX Live binaries
-`texlive-core` : TeX Live core distribution
-`tllocalmgr-git` : A shell and command-line utility to manage TeXLive on Arch Linux
+`texlive-bin` : TeX Live binaries <br/>
+`texlive-core` : TeX Live core distribution <br/>
+`tllocalmgr-git` : A shell and command-line utility to manage TeXLive on Arch Linux <br/>
 
 ```sh
 pacman -S texlive-bin texlive-core tllocalmgr-git
