@@ -23,40 +23,21 @@ BWHITE := \033[1;37m
 
 all:
 	@printf "%b" "$(BYELLOW)Building $(TARGET)...\n$(NC)"
-	lualatex $(TARGET).tex
+	lualatex $(TARGET).tex >/dev/null
 	@printf "%b" "$(BBLUE)Compiling the bibliography...\n$(NC)"
-	bibtex $(TARGET)
-	@printf "%b" "$(BYELLOW)Building $(TARGET)...\n$(NC)"
-	lualatex $(TARGET).tex
-	@printf "%b" "$(BPURPLE)Compiling the glossaries...\n$(NC)"
-	makeglossaries $(TARGET)
+	bibtex $(TARGET) >/dev/null
 	@printf "%b" "$(BCYAN)Refreshing the target file...\n$(NC)"
-	lualatex $(TARGET).tex
+	lualatex $(TARGET).tex >/dev/null
+	@printf "%b" "$(BPURPLE)Compiling the glossaries...\n$(NC)"
+	makeglossaries $(TARGET) >/dev/null
+	@printf "%b" "$(BCYAN)Refreshing the target file...\n$(NC)"
+	lualatex $(TARGET).tex >/dev/null
 	@printf "%b" "$(BGREEN)Done.\n$(NC)"
 	zathura $(TARGET).pdf
 
 clean:
 	@printf "%b" "$(WHITE)Cleaning...\n$(NC)"
-	rm -rf $(shell find . -type f -name "*.aux")
-	rm -rf $(shell find . -type f -name "*.acn")
-	rm -rf $(shell find . -type f -name "*.bbl")
-	rm -rf $(shell find . -type f -name "*.bcf")
-	rm -rf $(shell find . -type f -name "*.blg")
-	rm -rf $(shell find . -type f -name "*.glo")
-	rm -rf $(shell find . -type f -name "*.ist")
-	rm -rf $(shell find . -type f -name "*.lof")
-	rm -rf $(shell find . -type f -name "*.log")
-	rm -rf $(shell find . -type f -name "*.lol")
-	rm -rf $(shell find . -type f -name "*.lot")
-	rm -rf $(shell find . -type f -name "*.out")
-	rm -rf $(shell find . -type f -name "*.run.xml")
-	rm -rf $(shell find . -type f -name "*.toc")
-	rm -rf $(shell find . -type f -name "*-blx.bib")
-	rm -rf $(shell find . -type f -name "*.acr")
-	rm -rf $(shell find . -type f -name "*.alg")
-	rm -rf $(shell find . -type f -name "*.glg")
-	rm -rf $(shell find . -type f -name "*.gls")
-	rm -rf $(shell find . -type f -name "*#*")
+	rm -rf $(shell find . -type f -iname \*.log -o -iname \*.toc -o -iname \*.ist -o -iname \*.aux -o -iname \*.out -o -iname \*.blg -o -iname \*.bbl -o -iname \*.bak -o -iname \*.lof -o -iname \*.lot -o -iname \*.idx -o -iname \*.ind -o -iname \*.ilg -o -iname \*.glo -o -iname \*.gls -o -iname \*.glsdef -o -iname \*.glsdel -o -iname \*.glsnew -o -iname \*.run.xml -o -iname \*-blx.bib -o -iname \*.acr -o -iname \*.acn -o -iname \*.alg -o -iname \*.glg)
 	@printf "%b" "$(PURPLE)Cleaning Done.$(NC)\n"
 
 .PHONY : all clean
