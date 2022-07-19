@@ -1,6 +1,14 @@
 \begin{titlepage}
 \centering
 
+\newgeometry{
+  a4paper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom = 1in
+}
+
 \input{parts/title/header}
 \vspace{2cm}\input{parts/title/title}
 \vspace{1cm}\input{parts/title/award}
@@ -8,4 +16,6 @@
 \vspace{2cm}\input{parts/title/supervisors}
 \vspace{1cm}\input{parts/title/date}
 
+\restoregeometry
 \end{titlepage}
+

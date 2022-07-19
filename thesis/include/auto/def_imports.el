@@ -2,7 +2,7 @@
  "def_imports"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("adjustbox" "export") ("glossaries" "automake" "acronym" "nonumberlist" "nopostdot" "toc" "section=section") ("biblatex" "backend=bibtex" "style=ieee" "sorting=ynt")))
+                     '(("adjustbox" "export") ("glossaries" "automake" "acronym" "nonumberlist" "nopostdot" "toc" "section=section") ("textpos" "absolute") ("biblatex" "backend=bibtex" "style=ieee" "sorting=ynt")))
    (add-to-list 'LaTeX-verbatim-environments-local "lstlisting")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
@@ -31,6 +31,8 @@
     "graphicx"
     "emoji"
     "babel"
+    "fancyhdr"
+    "textpos"
     "titlesec"
     "biblatex"
     "tikz"
