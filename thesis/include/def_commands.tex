@@ -11,9 +11,22 @@
 %   #2  - figure content
 %   #3  - figure caption
 \newcommand{\namedfigure}[4]{
-    \begin{figure}[#1]
-        \label{#2}
-        {\centering #3}
-        \caption{#4}
-    \end{figure}
+  \begin{figure}[#1]
+    \label{#2}
+    {\centering #3}
+    \caption{#4}
+  \end{figure}
 }
+
+\newcommand\blankpage{
+  \null
+  \thispagestyle{empty}
+  \addtocounter{page}{-1}
+  \newpage
+}
+
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+% \renewcommand*{\arraystretch}{1.2}% default is 1
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength\glsdescwidth{0.8\hsize}

@@ -26,6 +26,8 @@ all:
 	lualatex $(TARGET).tex
 	@printf "%b" "$(BBLUE)Compiling the bibliography...\n$(NC)"
 	bibtex $(TARGET)
+	@printf "%b" "$(BYELLOW)Building $(TARGET)...\n$(NC)"
+	lualatex $(TARGET).tex
 	@printf "%b" "$(BPURPLE)Compiling the glossaries...\n$(NC)"
 	makeglossaries $(TARGET)
 	@printf "%b" "$(BCYAN)Refreshing the target file...\n$(NC)"
