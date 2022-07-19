@@ -13,7 +13,7 @@ It is a Blockchain based system that can be used to store data in a decentralize
 
 ## Preview
 
-<img src="/preview-01.png" width="500px" alt="cover" />
+<img src="./preview-01.png" width="500px" alt="cover" />
 
 
 ## License
