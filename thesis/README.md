@@ -27,7 +27,7 @@ Afterword, run:
 
 ```sh
 make all clean
-``
+```
 
 ## License
 
