@@ -2,6 +2,7 @@
  "literature_review"
  (lambda ()
    (TeX-run-style-hooks
-    "resources/figures/very_real_figure"))
+    "parts/main/literature_review/introduction"
+    "parts/main/literature_review/conclusion"))
  :latex)
 

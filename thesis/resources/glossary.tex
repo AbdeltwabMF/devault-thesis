@@ -1,6 +1,6 @@
 % Blockchain Infurastructure
 \newglossaryentry{blockchain} {
-	name=blockchain,
+	name=Blockchain,
 	description={A blockchain is a distributed database that is shared among the nodes of a computer network. As a database, a blockchain stores information electronically in digital format.}
 }
 
@@ -25,12 +25,12 @@
 }
 
 \newglossaryentry{proof-of-work} {
-	name=proof-of-work,
+	name=pow,
 	description={Proof of work (PoW) is a form of cryptographic proof in which one party (the prover) proves to others (the verifiers) that a certain amount of a specific computational effort has been expended.}
 }
 
 \newglossaryentry{proof-of-stake} {
-	name=proof-of-stake,
+	name=pos,
 	description={Proof-of-stake (PoS) protocols are a class of consensus mechanisms for blockchains that work by selecting validators in proportion to their quantity of holdings in the associated cryptocurrency. This is done to avoid the computational cost of proof-of-work schemes.}
 }
 
@@ -45,12 +45,12 @@
 }
 
 \newglossaryentry{mainnet} {
-	name=main net,
+	name=mainnet,
 	description={The production version of a blockchain.}
 }
 
 \newglossaryentry{testnet} {
-	name=test net,
+	name=testnet,
 	description={A staging blockchain environment for testing application before being put into production (or onto the mainnet).}
 }
 
@@ -72,7 +72,7 @@
 
 % Attacks
 \newglossaryentry{51 attack} {
-	name=51 attack,
+	name=51\% attack,
 	description={When more than 50\% of the miners in a blockchain launch an attack on the rest of the nodes/users to attempt to steal assets or double spend.}
 }
 
@@ -112,11 +112,10 @@
 	description={A random sequence of words which can be used to restore a lost wallet.}
 }
 
-\newglossaryentry{public & private keys} {
-	name=public key and private key,
+\newglossaryentry{crypto keys} {
+	name=crypto keys,
 	description={A public key is a unique string of characters derived from a private key which is used to encrypt a message or data. The private key is used to decrypt the message or data.}
 }
-
 
 % Bitcoin
 \newglossaryentry{cryptocurrency} {
@@ -125,19 +124,19 @@
 }
 
 \newglossaryentry{bitcoin} {
-	name=bitcoin,
+	name=Bitcoin,
 	description={A cryptocurrency that uses a blockchain network to regulate the generation of coins/tokens and transfer of funds. Bitcoin is the most widely used cryptocurrency and is the most widely traded currency in the world.}
 }
 
 \newglossaryentry{satoshi nakamoto} {
-	name=satoshi nakamoto,
+	name=Satoshi Nakamoto,
 	description={The name used by the person or entity who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation. As part of the implementation, Nakamoto also devised the first blockchain database.}
 }
 
 
 % Ethereum
 \newglossaryentry{ethereum} {
-	name=ethereum,
+	name=Ethereum,
 	description={A public blockchain that supports smart contracts.}
 }
 
@@ -156,34 +155,34 @@
 	description={Bytecode is the compiled code of a smart contract.}
 }
 
-\newglossaryentry{transaction} {
+\newglossaryentry{tx g} {
 	name=transaction,
 	description={A transaction is a set of instructions that are sent to a blockchain network to be processed by the network.}
 }
 
-\newglossaryentry{gas} {
+\newglossaryentry{gas g} {
 	name=gas,
 	description={A fee charged to write a transaction to a public blockchain. The gas is used to reward the miner which validates the transaction.}
 }
 
-\newglossaryentry{decentralized application} {
-	name=dapp,
+\newglossaryentry{dapp g} {
+	name=dApp,
 	description={Software which does not rely on a central system or database but can share information amongst its users via a decentralized database, such as a blockchain.}
 }
 
 % Miscellaneous
 \newglossaryentry{open source} {
-	name=open source,
+	name=open-source,
 	description={Software products that include permission to use, enhance, reuse or modify the source code, design documents, or content of the product.}
 }
 
-\newglossaryentry{peer-to-peer} {
+\newglossaryentry{p2p g} {
 	name=peer-to-peer,
 	description={A direct connection between two participants in a system.}
 }
 
 \newglossaryentry{decentralized} {
-	name=decentralization,
+	name=decentralized,
 	description={A system with no single point where the decision is made. Every node makes a decision for its own behavior and the resulting system behavior is the aggregate response.}
 }
 
@@ -192,44 +191,63 @@
 	description={A system or process for which there is a singular (i.e., central) source of authority, control and/or truth.}
 }
 
-
 % IPFS
-\newglossaryentry{InterPlanetary file system} {
-	name=ipfs,
+\newglossaryentry{ipfs g} {
+	name=IPFS,
 	description={A peer-to-peer hypermedia protocol for the Internet. It is used to store and retrieve information in a decentralized way.}
 }
 
-\newglossaryentry{access-control list} {
-	name=acl,
+\newglossaryentry{acl g} {
+	name=ACL,
 	description={In computer security, an access-control list (ACL) is a list of permissions associated with a system resource, also known as an object. An ACL specifies which users or system processes are granted access to objects, as well as what operations are allowed on given objects.}
 }
 
 \newglossaryentry{bitTorrent} {
-	name=bitTorrent,
+	name=BitTorrent,
 	description={BitTorrent is a communication protocol for peer-to-peer file sharing, which is used to distribute data and electronic files over the Internet.}
 }
 
-\newglossaryentry{content identifier} {
-	name=cid,
+\newglossaryentry{cid g} {
+	name=CID,
 	description={A Content Identifier (CID) is a self-describing content-addressed label used to point to the data stored in IPFS.}
 }
 
 \newglossaryentry{daemon} {
-	name=daemon,
+	name=Daemon,
 	description={A Daemon is a computer program that typically runs in the background. The IPFS daemon is how you take your node online to the IPFS network.}
 }
 
-\newglossaryentry{distributed hash table} {
-	name=dht,
+\newglossaryentry{dht g} {
+	name=DHT,
 	description={A Distributed Hash Table (DHT) is a distributed key-value store where keys are cryptographic hashes. In IPFS, each peer is responsible for a subset of the IPFS DHT.}
 }
 
-\newglossaryentry{gateway} {
-	name=gateway,
+\newglossaryentry{ipfs gateway} {
+	name=IPFS Gateway,
 	description={An IPFS Gateway acts as a bridge between traditional web browsers and IPFS. Through the gateway, users can browse files and websites stored in IPFS as if they were stored on a traditional web server.}
 }
 
 \newglossaryentry{merkle tree} {
-	name=merkle tree,
+	name=Merkle Tree,
 	description={A Merkle Tree is a specific type of hash tree used in cryptography and computer science, allowing efficient and secure verification of the contents of large data structures. Named after Ralph Merkle, who patented it in 1979.}
+}
+
+\newglossaryentry{http g} {
+  name=HTTP,
+  description={HTTP is a protocol for fetching resources such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.}
+}
+
+\newglossaryentry{bandwidth} {
+  name=bandwidth,
+  description={bandwidth is a measurement indicating the maximum capacity of a wired or wireless communications link to transmit data over a network connection in a given amount of time. Typically, bandwidth is represented in the number of bits, kilobits, megabits or gigabits that can be transmitted in 1 second. Synonymous with capacity, bandwidth describes data transfer rate.}
+}
+
+\newglossaryentry{web2} {
+  name=Web 2.0,
+  description={Web 2.0 is the World Wide Web based on the concepts of social media, where the user can create content, post it online, and engage with other user-generated content.}
+}
+
+\newglossaryentry{web3} {
+  name=Web 3.0,
+  description={Web 3.0 is an idea for a new iteration of the World Wide Web which incorporates concepts such as decentralization, blockchain technologies, and token-based economics.}
 }
