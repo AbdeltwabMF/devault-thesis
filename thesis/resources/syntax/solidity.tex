@@ -1,0 +1,29 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+\lstdefinelanguage{solidity} {
+  morekeywords={pragma, contract, address, uint, bool, event, public,
+    payable, constructor, function, require, for, if, emit, return,
+    true, false, memory, storage},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morecomment=[s][\color{forestgreen}]{/*+}{*/},
+  morecomment=[s][\color{harvardcrimson}]{/*-}{*/},
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\lstdefinestyle{solidity} {
+  style=shared,
+  language=solidity,
+	backgroundcolor=\color{eggshell},
+	keywordstyle=\bfseries\color{egyptianblue},
+	commentstyle=\itshape\color{lava},
+	stringstyle=\color{greencssgreen},
+	numberstyle=\tiny\color{lavenderindigo},
+  % identifierstyle=\color{black},
+  otherkeywords={},
+}

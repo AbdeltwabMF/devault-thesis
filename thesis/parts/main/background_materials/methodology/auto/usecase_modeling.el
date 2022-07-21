@@ -2,7 +2,7 @@
  "usecase_modeling"
  (lambda ()
    (TeX-run-style-hooks
-    "resources/figures/usecases_diagram")
+    "resources/figures/dapp_usecases_diagram")
    (LaTeX-add-labels
     "tab:useCaseConnect"
     "tab:useCaseUpload"
