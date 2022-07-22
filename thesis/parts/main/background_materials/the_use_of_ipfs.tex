@@ -24,9 +24,33 @@ There are three fundamental principles to understanding IPFS: \\
 \item Content discovery via distributed hash tables (DHTs).
 \end{itemize}
 
-These three principles build upon each other to enable the IPFS ecosystem.
+These three principles build upon each other to enable the IPFS ecosystem. \\[-8pt]
 
-\input{resources/figures/ipfs_algorithm}
+IPFS use cryptographic hashing functions to create fingerprints. Basically, we take the raw content (in this case, a cat photo), and run that data through a hash function, to produce a digest. This digest is guaranteed to be cryptographically unique to the contents of the file (or image or whatever), and that file only. If I change that file by even one bit, the hash will become something completely different. \\[-8pt]
+
+Figure \ref{img:ipfsAlgorithmVis} shows how the content identifier is generated from the raw file.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[!hbtp]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ipfs_raw_dig_cid_1.png}
+    \caption{From raw image to cryptographic digest to content id (multihash).}
+    \label{img:ipfsalgorithmvis1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[!hbtp]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ipfs_raw_dig_cid_2.png}
+    \caption{Large files are chunked, hashed, and organized into an IPLD (Merkle DAG object).}
+    \label{img:ipfsalgorithmvis2}
+  \end{subfigure}
+  \caption{IPFS base CID construction}
+  \label{img:ipfsAlgorithmVis}
+\end{figure}
+
+The content is chunked up into smaller parts (about 256k each), each part is hashed, a CID is created for each chunk, and then these chunks are combined into a hierarchical data structure, for which a single, base CID is computed.
+This data structure is essentially something called a Merkle DAG, or directed acyclic graph. \\[-8pt]
 
 \subsection{Need for IPFS protocol}
 

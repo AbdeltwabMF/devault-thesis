@@ -1,7 +1,9 @@
 (TeX-add-style-hook
  "the_use_of_ipfs"
  (lambda ()
-   (TeX-run-style-hooks
-    "resources/figures/ipfs_algorithm"))
+   (LaTeX-add-labels
+    "img:ipfsalgorithmvis1"
+    "img:ipfsalgorithmvis2"
+    "img:ipfsAlgorithmVis"))
  :latex)
 

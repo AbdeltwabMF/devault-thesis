@@ -1,4 +1,50 @@
-\section{Implementation}
+\section{Implementation and Testing}
 
-\input{parts/main/system_design/implementation/tools_and_tech}
-\input{parts/main/system_design/implementation/code_docs}
+Here you will find the implementation details.
+
+\subsection{Smart Contracts}
+
+\subsubsection{States}
+
+Persistent data is referred to as storage and is represented by state variables. These values get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs when it compiles.
+
+\lstinputlisting[style=solidity]{resources/codes/sm_states.sol}
+
+\subsubsection{Store File}
+
+Whenever you call storeFile with its parameters, it pushes a new file to the array of files of the account that makes that call.
+\lstinputlisting[style=solidity]{resources/codes/sm_storeFile.sol}
+
+\subsubsection{Retrieve File}
+
+getFiles are a group of functions that retrieve the files' metadata.
+\lstinputlisting[style=solidity]{resources/codes/sm_getFiles.sol}
+
+\subsubsection{Share File}
+
+Whenever you call shareFile with the address parameter, it pushes a new file to the array of files of that address.
+\lstinputlisting[style=solidity]{resources/codes/sm_shareFile.sol}
+
+\subsubsection{Delete File}
+
+Whenever you call deleteFile with the index parameter, it removes the file with that index from the array of files of the account that makes that call.
+\lstinputlisting[style=solidity]{resources/codes/sm_deleteFile.sol}
+
+\subsection{Front End}
+
+
+\subsubsection{Initialize}
+
+The initialize function is executed whenever the user clicks the connect wallet button.
+\lstinputlisting[style=javascript]{resources/codes/fe_initialize.js}
+
+\subsubsection{UploadFile}
+
+When you press the upload button, this is what happens: \\
+\begin{itemize}
+\item The file gets encrypted using AES-256-CBC mode.
+\item The file is split into small chunks and uploaded to the IPFS node.
+\item The file's metadata is stored in the smart contract.
+\end{itemize}
+
+\lstinputlisting[style=javascript]{resources/codes/fe_uploadFile.js}

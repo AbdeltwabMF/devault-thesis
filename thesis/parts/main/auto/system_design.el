@@ -3,7 +3,8 @@
  (lambda ()
    (TeX-run-style-hooks
     "parts/main/system_design/introduction"
-    "parts/main/system_design/implementation"
-    "parts/main/system_design/testing"))
+    "parts/main/system_design/architecture"
+    "parts/main/system_design/tools_and_tech"
+    "parts/main/system_design/implementation"))
  :latex)
 
