@@ -1,13 +1,12 @@
-<h1 align="center">Devault - The Thesis</h1>
+<h1 align="center">Devault - The Presentation</h1>
 
 <h4 align="center">
-	Thesis of the project entitled "Devault: A Blockchain-based, self-hosted, and end-to-end encrypted cloud storage"
+	Presentation of the project entitled "Devault: A Blockchain-based, self-hosted, and end-to-end encrypted cloud storage"
 </h4>
 
 ## Overview
 
-This is the thesis of my bachelor thesis project entitled "Devault: A Blockchain-based, self-hosted, and end-to-end encrypted cloud storage" that I undertook in 2022.
-
+This is the presentation of my bachelor thesis project entitled "Devault: A Blockchain-based, self-hosted, and end-to-end encrypted cloud storage" that I undertook in 2022.
 
 ## Preview
 
