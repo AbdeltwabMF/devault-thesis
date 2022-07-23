@@ -22,11 +22,12 @@ Before you jump into the build process, you have to install the following packag
 `texlive-bin` : TeX Live binaries <br/>
 `texlive-core` : TeX Live core distribution <br/>
 `tllocalmgr-git` : A shell and command-line utility to manage TeXLive on Arch Linux <br/>
+`zathura` : A PDF viewer <br/>
 
 If you are using Arch Linux, you can install these packages with the following command:
 
 ```sh
-pacman -S texlive-bin texlive-core tllocalmgr-git
+pacman -S texlive-bin texlive-core tllocalmgr-git zathura
 ```
 
 If you are using Ubuntu, you can install these packages with the following command:
@@ -34,13 +35,13 @@ If you are using Ubuntu, you can install these packages with the following comma
 The full set of TeX Live packages.
 
 ```sh
-sudo apt install texlive-full
+sudo apt install texlive-full zathura
 ```
 
 Or, the light version:
 
 ```sh
-sudo apt install texlive
+sudo apt install texlive zathura
 ```
 
 Afterword, run:
