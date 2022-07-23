@@ -30,26 +30,31 @@
 %%%%%%%%%%%%%%%%
 %% Title Page %%
 %%%%%%%%%%%%%%%%
-\title{Decentralized Vault (graduation project)}
-\subtitle{\texttt{A Blockchain-based Decentralized Cloud Storage}}
+\title{Devault (graduation project)}
+\subtitle{\texttt{A Blockchain-based end-to-end encrypted cloud storage}}
 \date {}
-\author {
-  \texttt{Supervisor:} \\
-  \texttt{\large{Dr. Abdurrahman Nasr}} \\
-  \\
-  \texttt{Participants:} \\
-  \texttt{\large{Abd El-Twab M. Fakhry}} \\
-  \texttt{\large{Hossam Ahmed Elsaied Eissa}}
-}
+\author {}
 \institute {
+  \begin{multicols}{2}
+    \begin{flushleft}
+      \texttt{Participants:} \\
+      \texttt{\large{Abd El-Twab M. Fakhry}} \\
+      \texttt{\large{Hossam A. Eissa}}
+    \end{flushleft}
+    \begin{flushleft}
+      \texttt{Supervisor:} \\
+      \texttt{\large{Dr. Abdurrahman Nasr}}
+    \end{flushleft}
+  \end{multicols}
+
   \centering
-  Al-Azhar University \\
-  Faculty of Engineering \\
-  Computers \& Systems Engineering Department \\\vspace{8pt}
+  \scshape{Al-Azhar University} \\
+  \scshape{\small Faculty of Engineering} \\
+  \scshape{\normalsize Computers \& Systems Engineering Department} \\\vspace{8pt}
   \today
 }
 
-% \titlegraphic{\hfill\includegraphics[height=1.5cm]{}}
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{devault-1024.png}}
 
 %%%%%%%%%%%%%%%%%%%
 %% Common colors %%
@@ -115,24 +120,58 @@ background=light
 
   \section{{Introduction}}
 
-  \begin{frame}[t]{Background}\vspace{8pt}
-    In the age of Big Data, The Internet Of Things, Digitization of every business, Data has become the biggest valuable asset for anyone.
-    And it’s justly necessary to store it in an organized way such that it’s easily accessible and secure. \\[4pt]
-    There are different ways to store data, such as local hard drives, flash memories, SD Cards, \textcolor{magenta}{\faCloud{}  cloud storage services}, and dare we even say DVDs? \\[10pt]
+  \begin{frame}[t]{Background and Motivation}\vspace{8pt}
+    \scshape{\Large What is Web 1.0?} \\[4pt]
+    \normalshape{}
+    Basically, this first version of the web was designed to help people better find information. This web version dealt was dedicated to users searching for data. This web version is sometimes called \textit{``the read-only Web''} because it lacks the necessary forms, visuals, controls, and interactivity we enjoy on today’s Internet.
 
-    \onslide<2->{\begin{block}{What is \faCloud{} cloud storage?}
-      Cloud storage is a way to save data securely online so that it can be accessed anytime from any location and easily shared with those who are granted permission.
-      It is usually accessed through an applications that use the API, such as cloud desktop storage, a cloud storage gateway or Web-based content management systems.}
-    \end{block}
+    \begin{itemize}
+    \item No user-to-server communication.
+    \item Static websites.
+    \item Hyper-linking and bookmarking pages.
+    \item Read-only Web.
+    \end{itemize}
+
+    \textit{\texttt{\textcolor{RoyalBlue}{Active 1989-2005}}}
+  \end{frame}
+
+  \begin{frame}[t]{Background and Motivation}\vspace{8pt}
+    \scshape{\Large What is Web 2.0?} \\[4pt]
+    \normalshape{}
+    If Web 1.0 was made up of a small number of people generating content for a larger audience, then Web 2.0 is many people creating even more content for a growing audience. Web 1.0 focused on reading; Web 2.0 focused on participating and contributing.
+
+    \begin{itemize}
+    \item Functions such as online documents, video streaming, etc.
+    \item Cloud computing operations
+    \item Centralized data.
+    \item Read and Write Web.
+    \end{itemize}
+
+    \textit{\texttt{\textcolor{RoyalBlue}{Active 1999-2012}}}
+  \end{frame}
+
+  \begin{frame}[t]{Background and Motivation}\vspace{8pt}
+    \scshape{\Large What is Web 3.0?} \\[4pt]
+    \normalshape{}
+    Web 3.0, which is also referred to as Web3, is built on a foundation consisting of the core ideas of decentralization, openness, and more excellent user utility. Web 1.0 is the ``read-only Web,'' Web 2.0 is the ``participative social Web,'' and Web 3.0 is the ``read, write, execute Web.''
+
+    \begin{itemize}
+    \item The Internet of Things (IoT).
+    \item Semantic searches.
+    \item Decentralized processes.
+    \item Read, Write, and Control Web.
+    \end{itemize}
+
+    \textit{\texttt{\textcolor{RoyalBlue}{Active 2006-ongoing}}}
   \end{frame}
 
   \begin{frame}[t]{Problem Statement}
-    \textbf{What is wrong with the current approach to store data?}
+    \scshape{\Large What is wrong with the current approach to store data?}
+    \normalshape{}
 
     \begin{itemize}
-    \onslide<2->{\item \texttt{\textcolor{red}{\faTimesCircle} Lack of Security and Privacy of Data} \\
-      If your data is left unencrypted, any system administrator that has root privileges can see your content.
-      Usually, companies look forward to your data so they can sell your data to other companies, suggest advertisements based on your data contents, and use it for their analysis.}
+      \onslide<2->{\item \texttt{\textcolor{red}{\faTimesCircle} Censorship} \\
+        As the internet currently works on a centralized model, it is susceptible to censorship. However, this is an issue that can be easily mitigated with decentralization..}
     \onslide<3->{\item \texttt{\textcolor{red}{\faTimesCircle} Data Hack} \\
       It's not recommended to store your sensitive data on a centralized server that is financially profitable to get hacked.}
     \onslide<4->{\item \texttt{\textcolor{red}{\faTimesCircle} Data Loss} \\
