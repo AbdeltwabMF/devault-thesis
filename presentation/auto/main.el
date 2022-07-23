@@ -50,7 +50,7 @@
     "img:ipfsalgorithmvis2"
     "img:ipfsAlgorithmVis")
    (LaTeX-add-bibliographies
-    "biblio")
+    "resources/bibliography")
    (LaTeX-add-xcolor-definecolors
     "charcoal"
     "champagne"

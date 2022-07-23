@@ -11,23 +11,20 @@
 \usepackage{tabularx}
 \usepackage{lmodern}
 \usepackage{anyfontsize}
-
-% Glyphs
 \usepackage{fontawesome5}
-
 \usepackage{booktabs}
 \usepackage{appendixnumberbeamer}
 \usepackage{csquotes}
-
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
-
 \usepackage{tikz}
 \usetikzlibrary[topaths]
 \usepackage{xspace}
-
 \usetikzlibrary{shapes,snakes}
 \usepackage{amsmath,amssymb}
+
+\graphicspath{{resources/}}
+
 
 %%%%%%%%%%%%%%%%
 %% Title Page %%
@@ -408,7 +405,7 @@ background=light
 
 	\begin{frame}[allowframebreaks]{References}
     \nocite{*}
-    \bibliography{biblio}
+    \bibliography{resources/bibliography}
 		\bibliographystyle{unsrt}
 	\end{frame}
 
