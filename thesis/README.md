@@ -52,4 +52,4 @@ make all clean
 
 ## License
 
-Licensed under the [MIT](LICENSE) license.
+Licensed under the [MIT](../LICENSE) license.
