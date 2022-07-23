@@ -6,6 +6,8 @@
 \usepackage{media9}
 \usepackage{siunitx}
 \usepackage[scale=2]{ccicons}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{lmodern}
 \usepackage{anyfontsize}
@@ -166,159 +168,242 @@ background=light
   \end{frame}
 
   \begin{frame}[t]{Problem Statement}
-    \scshape{\Large What is wrong with the current approach to store data?}
+    \scshape{\Large What is wrong?}
     \normalshape{}
 
     \begin{itemize}
-      \onslide<2->{\item \texttt{\textcolor{red}{\faTimesCircle} Censorship} \\
-        As the internet currently works on a centralized model, it is susceptible to censorship. However, this is an issue that can be easily mitigated with decentralization..}
-    \onslide<3->{\item \texttt{\textcolor{red}{\faTimesCircle} Data Hack} \\
-      It's not recommended to store your sensitive data on a centralized server that is financially profitable to get hacked.}
-    \onslide<4->{\item \texttt{\textcolor{red}{\faTimesCircle} Data Loss} \\
-      Of course, you can always stick with local storage, But once they are lost, stolen, or most likely encrypted by ransomware, you cannot make a recovery.}
+      \onslide<2->{
+      \item \texttt{\Large \textcolor{red}{\faTimesCircle} Censorship} \\
+        \only<2>{
+          As the internet currently works on a centralized model, it is susceptible to censorship. However, this is an issue that can be easily mitigated with decentralization..
+        }
+      }
+      \onslide<3->{
+      \item \texttt{\Large \textcolor{red}{\faTimesCircle} Giving over control of data} \\
+        \only<3>{
+          The biggest problem of third-party cloud storage services is that the company hands over their data to a third-party for storing services. Since the data is outside the company’s control, the data privacy settings are beyond their control as well.
+        }
+      }
+      \onslide<4->{
+      \item \texttt{\Large \textcolor{red}{\faTimesCircle} Data Mismanagement} \\
+        \only<4>{
+          media analytics company “Deep Roots Analytics,” used the Amazon cloud server to store information about as much as 61\% of the US population without password protection for almost two weeks. This information included names, email and home addresses, telephone numbers, voter ID, etc.
+        }
+      }
     \end{itemize}
   \end{frame}
 
   \begin{frame}{Proposed Solution}
     The \textbf{solution} we propose for such a problem is to use:
     \begin{itemize}
-    \onslide<2->{\item \textcolor{green}{\faCheckCircle{}} A distributed database system that will store data in a peer-to-peer network where is no central authority with the right to modify or censor clients' data.}
-    \onslide<3->{\item \textcolor{green}{\faCheckCircle{}} Encryption, so that everything should be encrypted before being uploaded.}
-    \onslide<4->{\item \textcolor{green}{\faCheckCircle{}} Diffusion, so that each object is shredded into small chunks. And object chunks are stored on different Nodes around the globe.}
-    \onslide<5->{\item \textcolor{green}{\faCheckCircle{}} A Blockchain and smart contract for identity without a central authority. Verification of data that cannot be faked or changed. Combine this with encryption, data ownership, and replication, and that’s what true decentralization means for applications.}
+      \onslide<2->{
+      \item \textcolor{green}{\faCheckCircle{}}
+        A distributed database system that will store data in a peer-to-peer network where is no central authority with the right to modify or censor clients' data.
+      }
+      \onslide<3->{
+      \item \textcolor{green}{\faCheckCircle{}}
+        Encryption, so that everything should be encrypted before being uploaded.
+      }
+      \onslide<4->{
+      \item \textcolor{green}{\faCheckCircle{}}
+        A Blockchain and smart contract for identity without a central authority. Verification of data that cannot be faked or changed. Combine this with encryption, data ownership, and replication, and that’s what true decentralization means for applications.
+      }
     \end{itemize}
   \end{frame}
 
-  \section{Concepts and terminology}
+  \section{Background Materials}
 
-  \begin{frame}{What is a blockchain?}
-    A \textbf{blockchain} is a public database that is updated and shared across many computers in a network.
+  \begin{frame}{Need for decentralization}
+    Decentralization is an ideology that advocates for a liberal style of administration in which no single authority has absolute power over all aspects of life.
 
-    \textbf{Block} refers to data and state being stored in consecutive groups known as \textbf{blocks}. Think of it as a Git commit.
+    Some of the benefits of decentralized cloud storage are listed below: \\
 
-    \textbf{Chain} refers to the fact that each block cryptographically references its parent. In other words, blocks get chained together. The data in a block cannot change without changing all subsequent blocks, which would require the consensus of the entire network. Think of it as a Git history.
-  \end{frame}
-
-  \begin{frame}{What is ethereum?}
-    \textcolor{blue}{\Item{Ethereum}} is a platform powered by blockchain technology that is best known for its native cryptocurrency, called ether, or \Item{ETH}, or simply ethereum. The distributed nature of blockchain technology is what makes the \Item{Ethereum} platform secure. \\[6pt]
-    \onslide<2->{The Ethereum platform supports ether in addition to a network of \Item{decentralized apps}, otherwise known as \Item{dApps}. Smart contracts, which originated on the Ethereum platform, are a central component of how the platform operates. Many applications use smart contracts in conjunction with blockchain technology.} \\[6pt]
-    \onslide<3->{As a cryptocurrency, Ethereum is second in market value only to Bitcoin as of January 2022.}
-  \end{frame}
-
-  \begin{frame}{ETH, EVM, and Smart contract}
     \begin{itemize}
-      \item \Item{ETH?} \\
-        The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
-      \onslide<2->{\item \Item{EVM?} \\
-        The Ethereum Virtual Machine is the global virtual computer. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.}
-      \onslide<3->{\item \Item{Smart contracts?} \\
-        A smart contract is code that lives on the Ethereum blockchain. Once smart contracts are deployed on the network you can't change them. Dapps can be decentralized because they are controlled by the logic written into the contract, not an individual or company. This also means you need to design your contracts very carefully.}
+    \item Encrypted
+    \item Secured
+    \item Less Computer Power with Bandwidth
+    \item No dedicated Servers for Storage
+    \item Fast
     \end{itemize}
+
   \end{frame}
 
-  \begin{frame}{What is dapps?}
-    Decentralized applications, or dApps, are software programs that have their backend code running on a distributed computer network. This is in sharp contrast to standard apps which typically run on centralized servers. \\
-    A dapp can have frontend code and user interfaces written in any language (just like an app) to make calls to its backend. Furthermore, its frontend can get hosted on decentralized storage such as \href{https://ipfs.io/}{IPFS}. \\[8pt]
+  \begin{frame}{What is IPFS}
+    The Interplanetary File System (IPFS) is a bundle of subprotocols and a project-driven by Protocol Labs, IPFS aims to improve the web’s efficiency and to make the web more decentralized and resilient. \\[-8pt]
 
-    \begin{block}{What is the IPFS?}
-      \texttt{IPFS,} The Interplanetary File System is a distributed system for storing and accessing files, applications, and websites. It is a worldwide peer-to-peer file-sharing system created by Protocol Labs.
-    \end{block}
-
-    A dApp is entirely open source. By way of its open-source nature, changes to the protocol must be decided via consensus of its network users.
+    \begin{figure}
+      \centering
+      \begin{subfigure}[!hbtp]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ipfs_raw_dig_cid_1.png}
+        \caption{From raw image to cryptographic digest to content id (multihash).}
+        \label{img:ipfsalgorithmvis1}
+      \end{subfigure}
+      % \hfill
+      \begin{subfigure}[!hbtp]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ipfs_raw_dig_cid_2.png}
+        \caption{Large files are chunked, hashed, and organized into an IPLD (Merkle DAG object).}
+        \label{img:ipfsalgorithmvis2}
+      \end{subfigure}
+      \caption{IPFS base CID construction}
+      \label{img:ipfsAlgorithmVis}
+    \end{figure}
   \end{frame}
 
-  \begin{frame}{Wallets, accounts, and addresses}
-    It's worth understanding the differences between some key terms.
-    \begin{itemize}
-      \item An Ethereum account is an entity that can send transactions and has a balance.
-      \item An Ethereum account has an Ethereum address, like an inbox has an email address. You can use this to send funds to an account.
-      \item A wallet is a product that lets you manage your Ethereum account. It allows you to view your account balance, send transactions, and more. \\[6pt]
-        Most wallet products will let you generate an Ethereum account. So you don't need one before you download a wallet.
-    \end{itemize}
+  \begin{frame}{What is Blockchain}
+    A blockchain is a growing list of records, called blocks, that are securely linked together using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree, where data nodes are represented by leafs).
+
+    \begin{figure}
+      \includegraphics[width=0.7\textwidth]{bitcoin_blockchain_structure.png}
+      \caption{Bitcoin blockchain structure.}
+    \end{figure}
   \end{frame}
 
-  \begin{frame}{Web3 vs Web2}
-    Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refers to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data.
+  \begin{frame}{What is a Smart contract}
+    A ``smart contract'' is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
 
-    \begin{table}
-      \caption{Practical comparisons}
-      \tiny
-      \begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
-        \toprule
-				Web2 & Web3 \\
-				\midrule
-        Twitter can censor any account or tweet & Web3 tweets would be uncensorable because control is decentralized \\
-        Payment service may decide to not allow payments for certain types of work & Web3 payment apps require no personal data and can't prevent payments \\
-        Servers for gig-economy apps could go down and affect worker income & Web3 servers can't go down – they use Ethereum, a decentralized network of 1000s of computers as their backend
-      \end{tabular}
-    \end{table}
+    Smart contracts are a type of Ethereum account. This means they have a balance and they can send transactions over the network. However they're not controlled by a user, instead they are deployed to the network and run as programmed.
+  \end{frame}
+
+  \begin{frame}{Wallet Auth}
+    To transact on Ethereum, you need an account. There is no MySQL ``users'' table. There is no email/password login.
+
+    To create an Ethereum account, you need to set up a crypto wallet like Metamask. The wallet will be responsible for generating and securing your crypto keys for signing transactions.
+
+    \begin{figure}
+      \includegraphics[width=0.25\textwidth]{ecdsa_generate_key.png}
+      \caption{Generating keys and addresses.}
+    \end{figure}
   \end{frame}
 
   \section{Methodology}
 
-  \begin{frame}{File processing}
-    Our dApp will take a file as input from a user and upload it to the IPFS by invoking an Ethereum contract. The hash of the file will be stored on Ethereum.
+  \begin{frame}{Development Methodology}
+    In this project we use both waterfall and scrum methodologies.
+    We used the waterfall methodology for developing the smart contract because we can not update it once we deploy it. And for the rest, we used the scrum methodology.
 
-    This is the process we’ll go through:
-    \begin{multicols}{2}
-      \begin{enumerate}[1.]
-      \item Take file as an input
-      \item Convert file to buffer
-      \item Read key used for encryption/decryption
-      \item Encrypt file using AES-256-cbc block cipher.
-      \item Split file into small chunks
-      \item Upload encrypted chunks to IPFS
-      \item Store hash of file returned by IPFS
-      \item Get user’s Metamask Ethereum address
-      \item User confirms transaction to Ethereum via Metamask
-      \item IPFS hash is written on Ethereum
-      \end{enumerate}
-    \end{multicols}
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{scrum.png}
+      \caption{Agile scrum development process.}
+    \end{figure}
   \end{frame}
 
-  \section{Development Methodology}
-
-  \begin{frame}{Software Development Approach}
-    We have chosen the Scrum methodology. It’s a popular way to implement agile, and it allows the team to deliver software regularly
+  \begin{frame}{Use Case Modeling}
     \begin{figure}
-      \includegraphics[width=0.8\textwidth]{agile-scrum.png}
-      \caption{Scrum Methodology}
+      \includegraphics[width=0.5\textwidth]{dapp_uscs_dig.pdf}
+      \caption{Devault dApp use case diagram.}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Sequence Diagram}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{connect_seq_dig.png}
+      \caption{Connect wallet act in sequential order.}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Sequence Diagram}
+    \begin{figure}
+      \includegraphics[width=0.9\textwidth]{upload_files_seq_dig.png}
+      \caption{Upload files act in sequential order.}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Sequence Diagram}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{download_files_seq_dig.png}
+      \caption{Download files act in sequential order.}
+    \end{figure}
+  \end{frame}
+
+  \section{System Design}
+
+  \begin{frame}{System Architecture}
+    Here is the conceptual model that defines the structure, behavior, and more views of a system.
+
+    \begin{figure}
+      \includegraphics[width=0.5\textwidth]{system_arch.pdf}
+      \caption{Decentralized vault dApp architecture.}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Tools and Technologies}
     \begin{itemize}
-      \begin{multicols}{2}
-      \item \faNode{} Node.js
-      \item Solidity (Smart contract)
-      \item \faCodeBranch{} Github Actions (CI/CD)
-      \item \faReact{} Next.js (React.js framework)
-      \item Hardhat (Solidity framework)
-      \item \faDocker{} Docker (Deployment)
-      \item Ethers (Library)
-      \item Infura (IPFS gateway)
+      \begin{multicols}{3}
+      \item JavaScript
+      \item \faReact{} Next.js
+      \item Solidity
+      \item Hardhat
+      \item Ethers.js
+      \item Metamask
+      \item Infura
+      \item IPFS
+      \item Etherscan
+      \item \faCodeBranch{} GitHub Actions
+      \item \faDocker{} Docker
+      \item Vercel
+      \item Bash/Shell
+      \item Emacs
+      \item Neovim
+      \item Figma
+      \item LaTeX
       \end{multicols}
     \end{itemize}
   \end{frame}
 
-  \section{Diagrams}
+  \section{Result and Discussion}
 
-  \begin{frame}{dApp Architecture}
+  \begin{frame}{Result}
+    We tested the Devault with uploading, downloading, sharing, deleting, connecting, and disconnecting functionality on different browsers and devices. Below we show the results of two of these tests. \\
+
+    \textbf{1. \textit{Brave browser, the desktop version and metamask}} \\
+
     \begin{figure}
-      \includegraphics[width=0.53\textwidth]{dapp-arch.png}
-      \caption{dApp Architecture}
+      \includegraphics[width=\textwidth]{connect_result.png}
+      \caption{The user experience of connecting wallet.}
     \end{figure}
   \end{frame}
 
-  \begin{frame}{Project Diagram}
+  \begin{frame}{Result}
+    \textbf{2. \textit{Brave browser, the mobile version and brave wallet}} \\
+
     \begin{figure}
-      \includegraphics[width=0.53\textwidth]{project-diagram.png}
-      \caption{Project Diagram}
+      \includegraphics[width=\textwidth]{upload_result.png}
+      \caption{The user experience of uploading files.}
     \end{figure}
+  \end{frame}
+
+  \begin{frame}{Limitation}
+    The limitations of our system are listed below: \\[8pt]
+
+    \begin{itemize}
+    \item The user should have cryptocurrency to make transactions and to reward the entity for renting their hard disk, which is a constraint.
+    \item The user should install specific software such as metamask or brave wallet to use our system.
+    \item Cryptocurrencies are illegal in some countries, whereas our system needs those cryptocurrencies to work.
+    \item The uploading of a file may take a while because of the encryption and block mining, which is not practical.
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Future Work}
+    The limitations of our system are listed below: \\[8pt]
+
+    \begin{enumerate}
+    \item Support Arabic language.
+    \item Use Shamir's Secret Sharing algorithms for sharing files.
+    \item Add the search functionality.
+    \item Compress files before uploading.
+    \item Enhance the ui/ux.
+    \item Manipulate selected files and folders.
+    \item Deploy to the mainnet.
+    \item Use Filecoin instead of IPFS.
+    \item Use the advantages of private and public keys in encryption/decryption.
+    \item Give feedback if the key used for decryption is not the same key used for encryption.
+    \end{enumerate}
   \end{frame}
 
 	\begin{frame}[standout]
-		Thanks!
+		Demo
 	\end{frame}
 
 	\begin{frame}[allowframebreaks]{References}
